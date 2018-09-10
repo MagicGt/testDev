@@ -17,12 +17,16 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+
+
         findViewById(R.id.btn1).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(MainActivity.this, SecondActivity.class));
+
             }
         });
+
     }
 
     @Override
@@ -30,11 +34,11 @@ public class MainActivity extends AppCompatActivity {
         super.onPause();
         Log.e(TAG, "onPause");
 
-        try {
-            Thread.sleep(3000);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
+        //        try {
+        //            Thread.sleep(3000);
+        //        } catch (InterruptedException e) {
+        //            e.printStackTrace();
+        //        }
 
     }
 
@@ -43,6 +47,5 @@ public class MainActivity extends AppCompatActivity {
         super.onStop();
         Log.e(TAG, "onStop: ");
     }
-
 
 }
